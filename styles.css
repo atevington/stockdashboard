@@ -1,0 +1,75 @@
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+	margin-bottom: 15px;
+}
+
+.center {
+	text-align: center;
+}
+
+.add-symbol-container {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.symbol-list {
+	margin: auto;
+	table-layout: fixed;
+	width: 95%;
+}
+
+.symbol-list td {
+	padding: 10px;
+}
+
+.symbol-list thead tr {
+	background: #E8E8E8;
+	font-weight: bold;
+}
+
+.symbol-list thead td {
+	border-bottom: 1px solid;
+}
+
+.symbol-list tbody tr:nth-child(even) {
+	background: #F5F5F5;
+}
+
+.symbol-list tbody tr:nth-child(odd) {
+	background: #FFFFFF;
+}
+
+.real-time-price {
+	font-size: x-small;
+}
+
+.remove-symbol {
+	color: #FF0000;
+	cursor: pointer;
+	font-size: small;
+	font-weight: bold;
+}
+
+.price-down {
+	color: #FF0000;
+}
+
+.price-up {
+	color: #008000;
+}
+
+.refresh {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.footer {
+	text-align: right;
+	font-size: x-small;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
