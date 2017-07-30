@@ -7,8 +7,11 @@ h1 {
 }
 
 input[type="text"] {
-	width: 30%;
-	max-width: 150px;
+	width: 150px;
+}
+
+button {
+	width: 80px;
 }
 
 .center {
