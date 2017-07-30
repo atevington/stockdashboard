@@ -7,7 +7,7 @@
 		var _self = this;
 		
 		var apiRequest = function(symbol, endpoint, checkProp, callback) {
-			$http({method: "GET", url: $stockDataUrl + encodeURIComponent(symbol) + "/" + endpoint}).then(function(res) {
+			$http({method: "GET", url: $stockDataUrl + encodeURIComponent(symbol) + "/" + endpoint + "?_d=" + (new Date()).getTime()}).then(function(res) {
 				if (res && res.data && res.data[checkProp]) {
 					callback(res.data);
 				}
