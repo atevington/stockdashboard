@@ -6,6 +6,11 @@ h1 {
 	margin-bottom: 15px;
 }
 
+input[type="text"] {
+	width: 30%;
+	max-width: 150px;
+}
+
 .center {
 	text-align: center;
 }
@@ -63,9 +68,12 @@ h1 {
 }
 
 .footer {
+	background: #FFFFFF;
 	text-align: right;
 	font-size: x-small;
 	position: fixed;
-	bottom: 10px;
-	right: 10px;
+	bottom: 0px;
+	right: 0px;
+	padding-bottom: 7px;
+	padding-right: 7px;
 }
