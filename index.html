@@ -27,7 +27,7 @@
 						<td>Company Name</td>
 						<td>Latest Price</td>
 						<td>Previous Close</td>
-						<td>% Change</td>
+						<td>Change</td>
 					</tr>
 				</thead>
 				<tbody>
@@ -43,7 +43,9 @@
 						<td>{{previousClose(symbol).toFixed(2)}}</td>
 						<td>
 							<span ng-class="percentChange(symbol) < 0 ? 'price-down' : (percentChange(symbol) > 0 ? 'price-up' : '')">
-								{{percentChange(symbol) > 0 ? "+" : ""}}{{percentChange(symbol).toFixed(2)}}
+								{{percentChange(symbol) < 0 ? "&#8595;" : (percentChange(symbol) > 0 ? "&#8593;" : "")}}
+								{{(lastPrice(symbol) - previousClose(symbol)).toFixed(2)}}
+								({{Math.abs(percentChange(symbol)).toFixed(2)}}%)
 							</span>
 						</td>
 					</tr>
