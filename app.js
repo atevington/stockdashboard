@@ -150,6 +150,7 @@
 		
 		$scope.symbols = [];
 		$scope.refreshDisabled = false;
+		$scope.Math = window.Math;
 		
 		$scope.$on("symbols", function(evt, rootSymbols) {
 			$scope.symbols = rootSymbols;
