@@ -39,11 +39,11 @@
 							{{symbol}} <span ng-click="removeSymbol(symbol)" title="Remove this symbol" class="remove-symbol">&#10005;</span>
 						</td>
 						<td>{{companyName(symbol)}}</td>
-						<td>{{lastPrice(symbol)}}{{isRealTimePrice(symbol) ? "*" : ""}}</td>
-						<td>{{previousClose(symbol)}}</td>
+						<td>{{lastPrice(symbol).toFixed(2)}}{{isRealTimePrice(symbol) ? "*" : ""}}</td>
+						<td>{{previousClose(symbol).toFixed(2)}}</td>
 						<td>
 							<span ng-class="percentChange(symbol) < 0 ? 'price-down' : (percentChange(symbol) > 0 ? 'price-up' : '')">
-								{{percentChange(symbol) > 0 ? "+" : ""}}{{percentChange(symbol)}}
+								{{percentChange(symbol) > 0 ? "+" : ""}}{{percentChange(symbol).toFixed(2)}}
 							</span>
 						</td>
 					</tr>
