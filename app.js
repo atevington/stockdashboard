@@ -169,15 +169,11 @@
 		};
 		
 		$scope.lastPrice = function(symbol) {
-			return quotes[symbol] ? (quotes[symbol].iexRealtimePrice || quotes[symbol].latestPrice) : 0;
-		};
-		
-		$scope.isRealTimePrice = function(symbol) {
-			return quotes[symbol] && quotes[symbol].iexRealtimePrice ? true : false;
+			return +((quotes[symbol] ? (quotes[symbol].iexRealtimePrice || quotes[symbol].latestPrice) : 0).toFixed(2));
 		};
 		
 		$scope.previousClose = function(symbol) {
-			return quotes[symbol] ? quotes[symbol].previousClose : 0;
+			return +((quotes[symbol] ? quotes[symbol].previousClose : 0).toFixed(2));
 		};
 		
 		$scope.percentChange = function(symbol) {
@@ -188,7 +184,11 @@
 				return 0;
 			}
 			
-			return (((lastPrice - previousClose) / previousClose) * 100);
+			return +((((lastPrice - previousClose) / previousClose) * 100).toFixed(2));
+		};
+		
+		$scope.isRealTimePrice = function(symbol) {
+			return quotes[symbol] && quotes[symbol].iexRealtimePrice ? true : false;
 		};
 		
 		$scope.removeSymbol = function(symbol) {
