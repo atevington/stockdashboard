@@ -1,5 +1,5 @@
 ## Intro
-Static site written in [AngularJS](https://angularjs.org/) showing latest price and percent change of stocks of your choice.
+Static site written in [AngularJS](https://angularjs.org/) showing latest price and daily movement of stocks of your choice.
 
 Demo [here](https://atevington.github.io/stockdashboard/).
 
